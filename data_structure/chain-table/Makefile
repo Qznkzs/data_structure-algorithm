@@ -15,9 +15,9 @@ HEADERS = $(wildcard *.h)
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -c $@
+	$(CC) $(CFLAGS) $(OBJS) -o $@
 
-%.o: %.c
+%.o: %.c $(HEADERS)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

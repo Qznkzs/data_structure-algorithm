@@ -4,7 +4,7 @@
 #define pool_size 1000
 
 int mem_pool_free_all_space(void);
-void *my_alloc(int size);
+void *my_malloc(int size);
 int my_free(void *pointer);
 
 #endif

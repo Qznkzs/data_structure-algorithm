@@ -1,0 +1,35 @@
+{
+    "configurations": [
+        {
+            "name": "linear-table",
+            "includePath": [
+                "${workspaceFolder}/linear-table/**",
+                "/usr/include",
+                "/usr/local/include"
+            ],
+            "defines": [
+                "__LINUX__"
+            ],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        },
+        {
+            "name": "chain-table",
+            "includePath": [
+                "${workspaceFolder}/chain-table/**",
+                "/usr/include",
+                "/usr/local/include"
+            ],
+            "defines": [
+                "__LINUX__"
+            ],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}

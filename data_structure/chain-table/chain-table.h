@@ -3,10 +3,12 @@
 
 typedef int data_t;
 
+#define LISTNAME_LEN 64
+
 typedef struct SingleLinkedListNode
 {
-	data_t data;
-	struct SingleLinkedListNode *next;
+    data_t data;
+    struct SingleLinkedListNode *next;
 }sllnode, *p_sllnode;
 
 typedef struct DualLinkedListNode
@@ -19,13 +21,14 @@ typedef struct DualLinkedListNode
 typedef struct LIST_HEAD_NODE
 {
     struct SingleLinkedListNode *head_node;
+    char list_name[LISTNAME_LEN];
     int list_len;
 }list_head_node, p_list_head_node;
 
 p_sllnode node_create(data_t data);
 int node_free(p_sllnode del_node);
 
-struct LIST_HEAD_NODE *list_create(void);
+struct LIST_HEAD_NODE *list_create(char *list_name);
 int list_free(struct LIST_HEAD_NODE *H);
 
 p_sllnode list_search_node(struct LIST_HEAD_NODE *H, int index);
@@ -35,6 +38,7 @@ int list_tail_insert(struct LIST_HEAD_NODE *H, p_sllnode new_node);
 int list_index_insert(struct LIST_HEAD_NODE *H, int index, p_sllnode new_node);
 int list_head_del(struct LIST_HEAD_NODE *H);
 int list_tail_del(struct LIST_HEAD_NODE *H);
+int list_display(struct LIST_HEAD_NODE *H);
 int list_index_del(struct LIST_HEAD_NODE *H, int index);
 
 int list_reverse_shallow(struct LIST_HEAD_NODE *H);
